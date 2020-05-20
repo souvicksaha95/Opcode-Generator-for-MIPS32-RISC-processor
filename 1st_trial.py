@@ -2,6 +2,7 @@ import numpy as np
 import json
 import re
 result_binary = '0'
+#result_hex = "32'h00000000"
 result_binary = result_binary.rjust(32, '0')
 with open('C:/Users/Souvick/Desktop/opcode.json') as f:
     data = json.load(f)
