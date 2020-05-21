@@ -75,8 +75,9 @@ while (1):
 
     result_hex = hex(int(result_binary, 2))
     result_hex = result_hex[2:]
-    if (len(result_hex) is 7):
-        result_hex = '0' + result_hex
+    if (len(result_hex) in [7, 6]):
+        while (len(result_hex) != 8):
+            result_hex = '0' + result_hex
     result_hex = "32'h" + result_hex
     print (result_hex)
             
