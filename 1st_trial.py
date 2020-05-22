@@ -8,7 +8,7 @@ with open('C:/Users/Souvick/Desktop/opcode.json') as f:
     data = json.load(f)
 while (1):
     command_input = input("Enter: ")
-    command = re.split(',\\ |\\ ',command_input)
+    command = re.split(',\\ |\\ ',command_input) #Needs to be modified to accept codes with '(' and ')'
     if (len(command) is 3):
         opcode = command[0]
         RS = command[1]
