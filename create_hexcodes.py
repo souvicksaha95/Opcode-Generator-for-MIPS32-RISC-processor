@@ -8,3 +8,8 @@ with open('C:/Users/Souvick/Desktop/opcode.json') as f:
 while (1):
     command_input = input("Enter: ")
     command = re.split(',\\ |\\ ',command_input)
+    if (len(command) is 3):
+        opcode = command[0]
+        RS = command[1]
+        Destination = command[2]
+        type_of_opcode = 2
