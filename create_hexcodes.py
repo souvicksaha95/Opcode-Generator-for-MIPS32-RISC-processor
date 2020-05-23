@@ -35,10 +35,8 @@ while (1):
         RS1 = temp_destination
         RS2 = temp_RS1
     elif (opcode in ['SW']):
-        print (data[opcode], RS1, RS2, Destination)
         temp_destination = Destination
         temp_RS1 = RS1
         RS1 = Destination
         Destination = RS2
         RS2 = temp_RS1
-        print (data[opcode], RS1, RS2, Destination)
