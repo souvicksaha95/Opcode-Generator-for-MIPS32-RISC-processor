@@ -13,3 +13,9 @@ while (1):
         RS = command[1]
         Destination = command[2]
         type_of_opcode = 2
+    elif (len(command) is 4):
+        opcode = command[0]
+        RS1 = command[1]
+        RS2 = command[2]
+        Destination = command[3]
+        type_of_opcode = 1
