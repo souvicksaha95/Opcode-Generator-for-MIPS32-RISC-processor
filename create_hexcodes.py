@@ -24,3 +24,7 @@ while (1):
         RS1 = RS2
         RS2 = Destination
         Destination = temp_RS1
+    elif (opcode in ['ADDI', 'SUBI', 'SLTI']):
+        temp_RS1 = RS1
+        RS1 = RS2
+        RS2 = temp_RS1
