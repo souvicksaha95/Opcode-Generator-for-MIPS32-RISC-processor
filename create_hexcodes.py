@@ -19,3 +19,8 @@ while (1):
         RS2 = command[2]
         Destination = command[3]
         type_of_opcode = 1
+    if (opcode in ['ADD', 'SUB', 'AND', 'OR', 'SLT', 'MUL']):
+        temp_RS1 = RS1
+        RS1 = RS2
+        RS2 = Destination
+        Destination = temp_RS1
