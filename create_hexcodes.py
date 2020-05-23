@@ -28,3 +28,9 @@ while (1):
         temp_RS1 = RS1
         RS1 = RS2
         RS2 = temp_RS1
+    elif (opcode in ['LW']):
+        temp_destination = Destination
+        temp_RS1 = RS1
+        Destination = RS2
+        RS1 = temp_destination
+        RS2 = temp_RS1
