@@ -40,3 +40,8 @@ while (1):
         RS1 = Destination
         Destination = RS2
         RS2 = temp_RS1
+    else:
+        if (opcode not in ['BNEQZ', 'BEQZ']):
+            print("Wrong opcode..")
+            continue
+    
