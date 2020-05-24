@@ -76,4 +76,14 @@ while (1):
             result_binary = result_binary[:16] + Destination + result_binary[21:]
         elif (Destination[0] is not 'R'):
             result_binary = result_binary[:16] + np.binary_repr(int(Destination), width=16)
-     
+    
+    print (result_binary)
+    result_hex = hex(int(result_binary, 2))
+    result_hex = result_hex[2:]
+    if (len(result_hex) in [7, 6]):
+        while (len(result_hex) != 8):
+            result_hex = '0' + result_hex
+    result_hex = "32'h" + result_hex
+    print (result_hex)
+    result_binary = '0'
+    result_binary = result_binary.rjust(32, '0')
