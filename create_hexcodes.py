@@ -54,3 +54,26 @@ while (1):
                 RS = '0' + RS
         result_binary = result_binary[:6] + RS + result_binary[11:]
         result_binary = result_binary[:16] + np.binary_repr(int(Destination), width=16)
+    if (type_of_opcode is 1):
+        RS1 = RS1[1:]
+        RS1 = "{0:b}".format(int(RS1))
+        if (len(RS1) < 5):
+            while(len(RS1) != 5):
+                RS1 = '0' + RS1
+        result_binary = result_binary[:6] + RS1 + result_binary[11:]
+        RS2 = RS2[1:]
+        RS2 = "{0:b}".format(int(RS2))
+        if (len(RS2) < 5):
+            while(len(RS2) != 5):
+                RS2 = '0' + RS2
+        result_binary = result_binary[:11] + RS2 + result_binary[16:]
+        if (Destination[0] is 'R'):
+            Destination = Destination[1:]
+            Destination = "{0:b}".format(int(Destination))
+            if (len(Destination) < 5):
+                while(len(Destination) != 5):
+                    Destination = '0' + Destination
+            result_binary = result_binary[:16] + Destination + result_binary[21:]
+        elif (Destination[0] is not 'R'):
+            result_binary = result_binary[:16] + np.binary_repr(int(Destination), width=16)
+     
