@@ -45,3 +45,12 @@ while (1):
             print("Wrong opcode..")
             continue
     
+    result_binary = data[opcode] + result_binary[6:]
+    if (type_of_opcode is 2):
+        RS = RS[1:]
+        RS = "{0:b}".format(int(RS))
+        if (len(RS) < 5):
+            while(len(RS) != 5):
+                RS = '0' + RS
+        result_binary = result_binary[:6] + RS + result_binary[11:]
+        result_binary = result_binary[:16] + np.binary_repr(int(Destination), width=16)
