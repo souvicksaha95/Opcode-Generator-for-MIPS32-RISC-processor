@@ -1,5 +1,5 @@
-import numpy as np                                              # needed to the conversion among different number bases - 10, 2, 16
-import json
+import numpy as np                                              # Need to the conversion among different number bases - 10, 2, 16
+import json                                                     # Need to read and access the Json file, where the opcodes are written
 import re
 result_binary = '0'
 result_binary = result_binary.rjust(32, '0')
