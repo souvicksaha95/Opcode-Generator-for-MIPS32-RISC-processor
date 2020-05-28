@@ -1,8 +1,8 @@
 import numpy as np                                              # Need to the conversion among different number bases - 10, 2, 16
 import json                                                     # Need to read and access the Json file, where the opcodes are written
 import re                                                       # Need to split the input string in different meaningful segments
-result_binary = '0'
-result_binary = result_binary.rjust(32, '0')
+result_binary = '0'                                             # Initializing the 32 bit string 
+result_binary = result_binary.rjust(32, '0')                    # Padding zeros to all 32 places
 with open('C:/Users/Souvick/Desktop/opcode.json') as f:
     data = json.load(f)
 while (1):
