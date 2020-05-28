@@ -4,8 +4,8 @@ import re                                                       # Need to split 
 result_binary = '0'                                             # Initializing the 32 bit string 
 result_binary = result_binary.rjust(32, '0')                    # Padding zeros to all 32 places
 with open('C:/Users/Souvick/Desktop/opcode.json') as f:
-    data = json.load(f)
-while (1):
+    data = json.load(f)                                         # Reading the Json file
+while (1): 
     command_input = input("Enter: ")
     command = re.split(',\\ |\\ |\\(',command_input)
     if (len(command) is 3):
