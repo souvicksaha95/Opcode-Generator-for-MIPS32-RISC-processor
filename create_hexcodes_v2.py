@@ -5,7 +5,7 @@ result_binary = '0'                                             # Initializing t
 result_binary = result_binary.rjust(32, '0')                    # Padding zeros to all 32 places
 with open('C:/Users/Souvick/Desktop/opcode.json') as f:
     data = json.load(f)                                         # Reading the Json file
-while (1): 
+while (1):                                                      # This loop will go on forever
     command_input = input("Enter: ")
     command = re.split(',\\ |\\ |\\(',command_input)
     if (len(command) is 3):
