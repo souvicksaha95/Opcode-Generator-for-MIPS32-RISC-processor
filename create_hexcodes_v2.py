@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np                                              # needed to the conversion among different number bases - 10, 2, 16
 import json
 import re
 result_binary = '0'
