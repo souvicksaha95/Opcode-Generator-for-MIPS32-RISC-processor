@@ -28,8 +28,8 @@ while (1):                                                      # This loop will
             Destination = Destination[:-1]
         RS1, RS2, Destination = Destination, RS1, RS2
     else:
-        if (opcode not in ['BNEQZ', 'BEQZ']):
-            print("Wrong opcode..")
+        if (opcode not in ['BNEQZ', 'BEQZ']):                   # Return to start the loop again, if false opcode is entered.
+            print("Wrong opcode..")                         
             continue
 
     result_binary = data[opcode] + result_binary[6:]
