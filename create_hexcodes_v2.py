@@ -8,7 +8,7 @@ with open('C:/Users/Souvick/Desktop/opcode.json') as f:
 while (1):                                                      # This loop will go on forever
     command_input = input("Enter: ")                            # Asking user to input the string
     command = re.split(',\\ |\\ |\\(',command_input)            # Split the srting by commas, space and brackets
-    if (len(command) is 3):         
+    if (len(command) is 3):                                     # For BEQZ and BNEQZ commands
         opcode = command[0]
         RS = command[1]
         Destination = command[2]
