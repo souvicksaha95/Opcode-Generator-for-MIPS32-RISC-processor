@@ -19,11 +19,11 @@ while (1):                                                      # This loop will
         RS2 = command[2]
         Destination = command[3]
         type_of_opcode = 1
-    if (opcode in ['ADD', 'SUB', 'AND', 'OR', 'SLT', 'MUL']):
+    if (opcode in ['ADD', 'SUB', 'AND', 'OR', 'SLT', 'MUL']):   # Swapping string segments to get he desired hex code
         RS1, RS2, Destination = RS2, Destination, RS1
-    elif (opcode in ['ADDI', 'SUBI', 'SLTI']):
+    elif (opcode in ['ADDI', 'SUBI', 'SLTI']):                  # Swapping string segments to get he desired hex code
         RS1, RS2 = RS2, RS1
-    elif (opcode in ['LW', 'SW']):
+    elif (opcode in ['LW', 'SW']):                              # Swapping string segments to get he desired hex code
         if (')' in Destination):
             Destination = Destination[:-1]
         RS1, RS2, Destination = Destination, RS1, RS2
