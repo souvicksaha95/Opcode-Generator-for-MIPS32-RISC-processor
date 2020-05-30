@@ -32,7 +32,7 @@ while (1):                                                      # This loop will
             print("Wrong opcode..")                         
             continue
 
-    result_binary = data[opcode] + result_binary[6:]
+    result_binary = data[opcode] + result_binary[6:]            # Manipulation of strings to get the proper opcode
     if (type_of_opcode is 2):
         RS = RS[1:]
         RS = "{0:b}".format(int(RS))
